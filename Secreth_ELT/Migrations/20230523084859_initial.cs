@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace Secreth_ELT.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,7 +20,8 @@ namespace Secreth_ELT.Migrations
                     City = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Temperature = table.Column<double>(type: "float", nullable: false),
                     Humidity = table.Column<int>(type: "int", nullable: false),
-                    WindSpeed = table.Column<double>(type: "float", nullable: false)
+                    WindSpeed = table.Column<double>(type: "float", nullable: false),
+                    LastUpdated = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

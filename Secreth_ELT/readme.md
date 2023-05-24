@@ -35,7 +35,7 @@ Make sure to update the following variables in the `Main` method of the `Program
 
 ## Method Documentation
 
-### `ExtractDataFromWeatherAPI(string apiKey, string city)`
+### `ExtractApiData(string apiKey, string city)`
 
 This method extracts weather data from the WeatherAPI.com API for the specified city.
 
@@ -43,7 +43,7 @@ This method extracts weather data from the WeatherAPI.com API for the specified 
 - `city`: The city for which you want to fetch weather data.
 - Returns: A `JObject` containing the weather data in JSON format.
 
-### `LoadRawDataIntoMongoDB(JObject weatherData, string connectionString, string databaseName, string collectionName)`
+### `LoadRawToMongoDB(JObject weatherData, string connectionString, string databaseName, string collectionName)`
 
 This method loads the raw weather data into MongoDB.
 
@@ -52,7 +52,7 @@ This method loads the raw weather data into MongoDB.
 - `databaseName`: The name of the MongoDB database to store the raw weather data.
 - `collectionName`: The name of the MongoDB collection to store the raw weather data.
 
-### `ExtractTransformedDataFromMongoDBAtlas(string connectionString, string databaseName, string collectionName, bool extractFromMongoDB)`
+### `ExtractMongoDBData(string connectionString, string databaseName, string collectionName, bool extractFromMongoDB)`
 
 This method extracts and transforms the weather data from MongoDB Atlas.
 
@@ -62,7 +62,7 @@ This method extracts and transforms the weather data from MongoDB Atlas.
 - `extractFromMongoDB`: Set this to `true` to extract and transform the data from MongoDB Atlas. Set it to `false` to skip this step.
 - Returns: A `DataTable` containing the transformed weather data.
 
-### `LoadTransformedDataIntoSQLServer(DataTable transformedData)`
+### `LoadMappedDataToSQL(DataTable transformedData)`
 
 This method loads the transformed weather data into SQL Server.
 
