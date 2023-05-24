@@ -15,7 +15,7 @@ class Program
         #endregion
 
         #region DontLook
-        string mongoConnectionString = "mongodb+srv://secreth:Qwerty089@cluster0.rsfq3yg.mongodb.net/?retryWrites=true&w=majority";
+        string mongoConnectionString = "mongodb+srv://<user>:<Password>@cluster0.rsfq3yg.mongodb.net/?retryWrites=true&w=majority";
         string databaseName = "WeatherDataCollection";
         string collectionName = "WeatherCity";
         #endregion
