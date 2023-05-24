@@ -64,9 +64,6 @@ This method extracts and transforms the weather data from MongoDB Atlas.
 
 ### `LoadMappedDataToSQL(DataTable transformedData)`
 
-This method loads the transformed weather data into SQL Server.
+This method loads the transformed weather data into SQL Server, ensuring that duplicate rows based on the `LastUpdated` value are not added.
 
 - `transformedData`: The transformed weather data in a `DataTable` format.
-
-Please refer to the code comments within the `Program.cs` file for more detailed explanations of the code logic.
-
